@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Page Translator",
+    "version": "1.0",
+    "description": "Translate the content of a web page",
+    "permissions": ["activeTab", "storage"],
+    "action": {
+      "default_icon": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+      },
+      "default_title": "Translate",
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "match_about_blank": true,
+        "match_about_newtab": true
+      }
+    ]
+  }
+  
